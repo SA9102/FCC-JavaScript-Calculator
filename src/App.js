@@ -236,7 +236,6 @@ export default function App() {
     setCalculation(values[0]);
     setRes(values[0]);
     setIsNegative(false);
-    // setCalculation("");
     setContinueCalculation(true);
   };
   // When DEL is pressed, remove the value that was just entered (either an operator or operand)
@@ -366,7 +365,7 @@ export default function App() {
       <p id="copyright">
         &copy; Shayan Ali (SA9102).
         <br />
-        <a href="" target="_blank">
+        <a href="https://github.com/SA9102/FCC-JavaScript-Calculator" target="_blank">
           View Repository
         </a>
       </p>
