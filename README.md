@@ -1,3 +1,9 @@
+# FCC JavaScript Calculator
+
+A graphical calculator that performs basic arithmetic. Made with React.
+
+Under the hood, the program converts the input calculation into Reverse Polish Notation (or postfix notation), then performs the calculation with this notation.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
