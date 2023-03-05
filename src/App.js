@@ -52,7 +52,7 @@ export default function App() {
             calculationCopy += ` ${value}`;
             setIsNegative(false);
           }
-        // Otherwise, if only the previous value is an operator
+          // Otherwise, if only the previous value is an operator
         } else if (
           operators.includes(calculationCopy[calculationCopy.length - 1])
         ) {
@@ -61,8 +61,8 @@ export default function App() {
           if (value == "-") {
             calculationCopy += " -";
             setIsNegative(true);
-          // If the operator pressed is not a minus sign, then replace the previous operator with
-          // the operator that was pressed on.
+            // If the operator pressed is not a minus sign, then replace the previous operator with
+            // the operator that was pressed on.
           } else {
             calculationCopy = calculationCopy.slice(
               0,
@@ -70,7 +70,7 @@ export default function App() {
             );
             calculationCopy += ` ${value}`;
           }
-        // continueCalculation is t
+          // continueCalculation is t
         } else if (continueCalculation) {
           calculationCopy = res + ` ${value}`;
           setContinueCalculation(false);
@@ -107,10 +107,13 @@ export default function App() {
         } else {
           let split = calculationCopy.split(" ");
           let lastNum = split[split.length - 1];
+          console.log(`SPLIT: ${split}`);
+          console.log(`LAST NUM: ${lastNum}`);
 
           if (lastNum == "0") {
             if (value == ".") {
-              calculationCopy = "0.";
+              split[split.length - 1] = "0.";
+              calculationCopy = split.join(" ");
             } else if (value != "0") {
               if (split.length === 1) {
                 calculationCopy = `${value}`;
@@ -149,14 +152,14 @@ export default function App() {
     // will be an operand or operator
     let postfix = [];
     let operatorStack = ["="];
-    for (let i of  calculationArray) {
+    for (let i of calculationArray) {
       // If operand
       if (!operators.includes(i)) {
         postfix.push(i);
       } else {
         // If operator
         if (
-          // If the current operator has higher priority than 
+          // If the current operator has higher priority than
           operatorPrecedence[i] >
           operatorPrecedence[operatorStack[operatorStack.length - 1]]
         ) {
@@ -231,7 +234,6 @@ export default function App() {
         ...values.slice(secondNumIndex + 2),
       ];
     }
-
 
     setCalculation(values[0]);
     setRes(values[0]);
@@ -365,7 +367,10 @@ export default function App() {
       <p id="copyright">
         &copy; Shayan Ali (SA9102).
         <br />
-        <a href="https://github.com/SA9102/FCC-JavaScript-Calculator" target="_blank">
+        <a
+          href="https://github.com/SA9102/FCC-JavaScript-Calculator"
+          target="_blank"
+        >
           View Repository
         </a>
       </p>
