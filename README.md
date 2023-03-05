@@ -10,6 +10,18 @@ This project was created for [freeCodeCamp](https://www.freecodecamp.org/), as p
 
 Date of completion: 25th February 2023.
 
+## Update Log
+
+### 05/03/2023
+
+Fixed a bug where typing a decimal between 0 and 1 as not the first operand will overwrite the entire calculation to just that decimal.
+
+For example, if you type in "78 + 0", and then add a decimal point, the expected result would be "78 + 0.", but instead the calculation would just display 0. This has been fixed.
+
+### 25/02/2023
+
+Repository created and code pushed.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
